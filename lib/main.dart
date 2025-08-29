@@ -191,7 +191,7 @@ class ActionButton extends StatelessWidget {
     bool isHoverd = false;
     return OutlinedButton(
       onHover: (hovering)=> setState(() => isHoverd = true),
-      onPressed: () => action.callback?.call(context),
+      onPressed: () => action.callback.call(context),
       style: OutlinedButton.styleFrom(
         backgroundColor: isHoverd ? Colors.yellowBrand : action.color,
         padding: const EdgeInsets.all(30.0),
